@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONA TICKETS</title>
+    <link rel="stylesheet" href="styleIndex.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="scriptIndex.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Welcome to KONA TICKETS</h1>
+        <p>Your Source for the Best Events</p>
+    </header>
+    <div style="text-align: right;">
+        <button type="button" id="createEvBtn" class="btn btn-primary">
+            Sell Tickets
+        </button>
+        <button type="button" id="shoppingCartBtn">
+            <img id="cartImg" src="images/shopping-cart-icon-png-favpng-e5DiMUYLNYaTjdsibphFUCAxC-removebg-preview.png"
+                alt="shopping cart">
+        </button>
+
+    </div>
+
+    <div id="eventForm" style="display: none;" class="text-center">
+        <form>
+            <label for="evNameInput">Event Name:</label><br>
+            <input type="text" id="evNameInput"><br>
+            <label for="evDescInput">Description:</label><br>
+            <input type="text" id="evDescInput"><br>
+            <label for="evLocInput">Location:</label><br>
+            <input type="text" id="evLocInput"><br>
+            <label for="evDateInput">Event Date:</label><br>
+            <input type="date" id="evDateInput"><br>
+            <label for="evTimeInput">Event Time:</label><br>
+            <input type="time" id="evTimeInput"><br>
+            <label for="evPriceInput">Ticket Price:</label><br>
+            <input type="number" min="1" step="any" id="evPriceInput"><br>
+            <label for="evQuantityInput">Number of tickets available:</label><br>
+            <input type="number" min="1" id="evQuantityInput"><br><br>
+            <button id="submitCrEvBtn" type="submit" class="btn btn-primary">Create Event</button>
+            <button id="closeBtn" type="submit" class="btn btn-close"></button>
+
+
+        </form>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Find Your Tickets</h2>
+                        <form id="searchForm">
+                            <div class="mb-3">
+                                <label for="eventInput" class="form-label">Event Name</label>
+                                <input type="text" class="form-control" id="nameSInput" placeholder="Enter Event Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="dateInput" class="form-label">Event Date</label>
+                                <input type="date" class="form-control" id="dateSInput">
+                            </div>
+                            <button id="submitSBtn" type="submit" class="btn btn-primary">Search Tickets</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Search Results</h2>
+                        <div id="resultsList">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
